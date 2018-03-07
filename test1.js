@@ -1,40 +1,20 @@
-function plus() {
-    var num1, num2, result;
-    num1 = document.getElementById("n1").value;
-    num1 = parseInt(num1);
-    num2 = document.getElementById("n2").value;
-    num2 = parseInt(num2);
-    result = num1 + num2;
-    document.getElementById("out").innerHTML = result;
-    // body...
+function pow(x, n) {
+  var result = x;
+
+  for (var i = 1; i < n; i++) {
+    result *= x;
+  }
+
+  return result;
 }
-function minus() {
-    var num1, num2, result;
-    num1 = document.getElementById("n1").value;
-    num1 = parseInt(num1);
-    num2 = document.getElementById("n2").value;
-    num2 = parseInt(num2);
-    result = num1 - num2;
-    document.getElementById("out").innerHTML = result;
-    // body...
-}
-function multiplication() {
-    var num1, num2, result;
-    num1 = document.getElementById("n1").value;
-    num1 = parseInt(num1);
-    num2 = document.getElementById("n2").value;
-    num2 = parseInt(num2);
-    result = num1 * num2;
-    document.getElementById("out").innerHTML = result;
-    // body...
-}
-function division() {
-    var num1, num2, result;
-    num1 = document.getElementById("n1").value;
-    num1 = parseInt(num1);
-    num2 = document.getElementById("n2").value;
-    num2 = parseInt(num2);
-    result = num1 / num2;
-    document.getElementById("out").innerHTML = result;
-    // body...
+
+var x = prompt("x?", '');
+var n = prompt("n?", '');
+
+if (n <= 1) {
+  alert('Степень ' + n +
+    'не поддерживается, введите целую степень, большую 1'
+  );
+} else {
+  alert( pow(x, n) );
 }
